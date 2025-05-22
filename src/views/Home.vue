@@ -43,6 +43,8 @@
         />
       </template>
     </section>
+    
+    <router-debug />
   </div>
 </template>
 
@@ -54,11 +56,13 @@ import { usePostsStore } from '../stores/posts';
 import { storeToRefs } from 'pinia';
 import { generateInitialPosts, users } from '../services/mockData';
 import PostCard from '../components/PostCard.vue';
+import RouterDebug from '../components/RouterDebug.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    PostCard
+    PostCard,
+    RouterDebug
   },
   setup() {
     const router = useRouter();
