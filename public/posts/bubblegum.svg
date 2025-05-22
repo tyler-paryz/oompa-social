@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <rect width="300" height="200" fill="#FFEEFF" />
+  <circle cx="100" cy="100" r="40" fill="#FF88FF" opacity="0.8" />
+  <circle cx="150" cy="80" r="30" fill="#88AAFF" opacity="0.8" />
+  <circle cx="200" cy="110" r="50" fill="#77FF99" opacity="0.8" />
+  <text x="150" y="180" font-family="Arial" font-size="16" fill="#884A1B" text-anchor="middle">Color-changing bubblegum!</text>
+</svg> 

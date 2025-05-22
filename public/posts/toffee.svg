@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <rect width="300" height="200" fill="#FFEEDD" />
+  <path d="M50,100 Q150,50 250,100 T50,130" stroke="#B35300" stroke-width="20" fill="none" />
+  <path d="M60,80 Q160,30 240,80" stroke="#FF7E1C" stroke-width="10" fill="none" />
+  <text x="150" y="180" font-family="Arial" font-size="16" fill="#884A1B" text-anchor="middle">Record-breaking toffee stretch!</text>
+</svg> 
