@@ -154,7 +154,7 @@ export default {
     
     const logout = () => {
       // Track logout event in Pendo before we log out
-      if (window.pendo) {
+      if (typeof window !== 'undefined' && window.pendo) {
         window.pendo.track('user_logout');
       }
       
@@ -181,7 +181,7 @@ export default {
       showNotifications.value = false;
       
       // Track notification click in Pendo
-      if (window.pendo) {
+      if (typeof window !== 'undefined' && window.pendo) {
         window.pendo.track('notification_clicked', {
           notificationType: notification.type,
           notificationId: notification.id
@@ -213,7 +213,7 @@ export default {
     
     const trackFooterLink = (linkType) => {
       // Track footer link clicks in Pendo
-      if (window.pendo) {
+      if (typeof window !== 'undefined' && window.pendo) {
         window.pendo.track('footer_link_clicked', {
           linkType
         });

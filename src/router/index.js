@@ -88,7 +88,7 @@ router.beforeEach((to, from, next) => {
 
 // Track page views with Pendo when navigation occurs
 router.afterEach((to) => {
-  if (window.pendo) {
+  if (typeof window !== 'undefined' && window.pendo) {
     window.pendo.pageLoad(to.name || to.path);
   }
 })

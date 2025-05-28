@@ -52,7 +52,7 @@ export default {
     
     const trackFooterLink = (linkType) => {
       // Track footer link clicks in Pendo
-      if (window.pendo) {
+      if (typeof window !== 'undefined' && window.pendo) {
         window.pendo.track('footer_link_clicked', {
           linkType
         });
@@ -61,7 +61,7 @@ export default {
     
     const trackCrossAppNavigation = (destination) => {
       // Track cross-app navigation in Pendo
-      if (window.pendo) {
+      if (typeof window !== 'undefined' && window.pendo) {
         window.pendo.track('cross_app_navigation', {
           source: 'oompa-social',
           destination: destination,

@@ -258,7 +258,7 @@ export default {
     
     onMounted(() => {
       // Track ecosystem page view in Pendo
-      if (window.pendo) {
+      if (typeof window !== 'undefined' && window.pendo) {
         window.pendo.track('ecosystem_page_viewed', {
           source: 'oompa-social',
           timestamp: new Date().toISOString()
@@ -271,7 +271,7 @@ export default {
       showModal.value = true;
       
       // Track app detail view in Pendo
-      if (window.pendo) {
+      if (typeof window !== 'undefined' && window.pendo) {
         window.pendo.track('app_details_viewed', {
           app_id: appId,
           source: 'ecosystem_page',
@@ -286,7 +286,7 @@ export default {
     
     const trackAppLaunch = (appId, source) => {
       // Track app launch in Pendo
-      if (window.pendo) {
+      if (typeof window !== 'undefined' && window.pendo) {
         window.pendo.track('app_launched', {
           app_id: appId,
           source: source,
@@ -299,7 +299,7 @@ export default {
     
     const trackFeatureInterest = (appId, featureId) => {
       // Track feature interest in Pendo
-      if (window.pendo) {
+      if (typeof window !== 'undefined' && window.pendo) {
         window.pendo.track('feature_interest', {
           app_id: appId,
           feature_id: featureId,

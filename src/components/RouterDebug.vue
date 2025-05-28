@@ -12,7 +12,13 @@ export default {
   name: 'RouterDebug',
   computed: {
     isDebug() {
-      return import.meta.env.MODE !== 'production';
+      // Check if import.meta.env exists and MODE is defined
+      try {
+        return import.meta.env && import.meta.env.MODE !== 'production';
+      } catch (error) {
+        // Default to false if there's any issue
+        return false;
+      }
     }
   }
 }
