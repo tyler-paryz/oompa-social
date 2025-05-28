@@ -39,6 +39,12 @@ const routes = [
     meta: { requiresAuth: true }
   },
   {
+    path: '/ecosystem',
+    name: 'Ecosystem',
+    component: () => import('../views/Ecosystem.vue'),
+    meta: { requiresAuth: true }
+  },
+  {
     path: '/logout',
     name: 'Logout',
     component: () => import('../views/Logout.vue'),

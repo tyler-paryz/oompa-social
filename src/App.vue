@@ -27,6 +27,10 @@
             <span>Friends</span>
             <span v-if="pendingFriendRequests > 0" class="badge">{{ pendingFriendRequests }}</span>
           </router-link>
+          <router-link to="/ecosystem" class="nav-item">
+            <i class="mdi mdi-apps"></i>
+            <span>Ecosystem</span>
+          </router-link>
           <button class="nav-item logout-button" @click="logout">
             <i class="mdi mdi-logout"></i>
             <span>Logout</span>
@@ -107,16 +111,7 @@
       <router-view />
     </main>
     
-    <footer v-if="isAuthenticated">
-      <div class="footer-content">
-        <p>&copy; 2023 Oompa Social - A Wonka Industries Company</p>
-        <div class="footer-links">
-          <a href="#" @click.prevent="trackFooterLink('terms')">Terms</a>
-          <a href="#" @click.prevent="trackFooterLink('privacy')">Privacy</a>
-          <a href="#" @click.prevent="trackFooterLink('help')">Help</a>
-        </div>
-      </div>
-    </footer>
+    <app-footer />
   </div>
 </template>
 
@@ -125,9 +120,13 @@ import { computed, ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useUserStore } from './stores/user';
 import { storeToRefs } from 'pinia';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: 'App',
+  components: {
+    AppFooter
+  },
   setup() {
     const router = useRouter();
     const userStore = useUserStore();
