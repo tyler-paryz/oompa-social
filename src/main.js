@@ -23,9 +23,6 @@ app.mount('#app')
 if (window.pendo) {
   // Default initialization for anonymous users
   window.pendo.initialize({
-    visitor: {
-      id: 'anonymous-user'     // Required if user is logged in
-    },
     account: {
       id: 'oompa-social-app'   // Required if using Pendo Feedback
     }
